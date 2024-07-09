@@ -1,0 +1,1 @@
+<add key="Nyaradzo-D365" value="https://pkgs.dev.azure.com/Nyaradzo-D365/_packaging/Nyaradzo-D365/nuget/v3/index.json" />

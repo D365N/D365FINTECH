@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>MyModel1</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{41831e27-4a8f-4d52-9a12-c2ec8880225f}</ProjectGuid>
+    <Name>Finance Operations Ext</Name>
+    <RootNamespace>FinanceOperations1</RootNamespace>
+    <StartupType>Class</StartupType>
+    <StartupObject>RunnableClass1</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>True</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Models" />
+    <Folder Include="Entities" />
+    <Folder Include="Forms" />
+    <Folder Include="Fields" />
+    <Folder Include="Classes" />
+    <Folder Include="StagingTables" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxClass\ConvertToInvoice">
+      <SubType>Content</SubType>
+      <Name>ConvertToInvoice</Name>
+      <Link>ConvertToInvoice</Link>
+    </Content>
+    <Content Include="AxClass\EidServiceContract">
+      <SubType>Content</SubType>
+      <Name>EidServiceContract</Name>
+      <Link>Classes\EidServiceContract</Link>
+    </Content>
+    <Content Include="AxClass\PackingSlip">
+      <SubType>Content</SubType>
+      <Name>PackingSlip</Name>
+      <Link>PackingSlip</Link>
+    </Content>
+    <Content Include="AxClass\RunnableClass1">
+      <SubType>Content</SubType>
+      <Name>RunnableClass1</Name>
+      <Link>RunnableClass1</Link>
+    </Content>
+    <Content Include="AxClass\RunnableClass2">
+      <SubType>Content</SubType>
+      <Name>RunnableClass2</Name>
+      <Link>RunnableClass2</Link>
+    </Content>
+    <Content Include="AxClass\SalesOrder">
+      <SubType>Content</SubType>
+      <Name>SalesOrder</Name>
+      <Link>SalesOrder</Link>
+    </Content>
+    <Content Include="AxDataEntityViewExtension\CustCustomerEntity.MyModel1Ext">
+      <SubType>Content</SubType>
+      <Name>CustCustomerEntity.MyModel1Ext</Name>
+      <Link>Entities\CustCustomerEntity.MyModel1Ext</Link>
+    </Content>
+    <Content Include="AxDataEntityViewExtension\CustCustomerV2Entity.MyModel1V2Ext">
+      <SubType>Content</SubType>
+      <Name>CustCustomerV2Entity.MyModel1V2Ext</Name>
+      <Link>Entities\CustCustomerV2Entity.MyModel1V2Ext</Link>
+    </Content>
+    <Content Include="AxDataEntityViewExtension\CustCustomerV3Entity.MyModel1V3Ext">
+      <SubType>Content</SubType>
+      <Name>CustCustomerV3Entity.MyModel1V3Ext</Name>
+      <Link>Models\CustCustomerV3Entity.MyModel1V3Ext</Link>
+    </Content>
+    <Content Include="AxDataEntityViewExtension\CustomerPaymentJournalLineEntity.MyModel1Ext">
+      <SubType>Content</SubType>
+      <Name>CustomerPaymentJournalLineEntity.MyModel1Ext</Name>
+      <Link>Entities\CustomerPaymentJournalLineEntity.MyModel1Ext</Link>
+    </Content>
+    <Content Include="AxDataEntityViewExtension\SalesInvoiceHeaderEntity.MyModel1Ext">
+      <SubType>Content</SubType>
+      <Name>SalesInvoiceHeaderEntity.MyModel1Ext</Name>
+      <Link>Entities\SalesInvoiceHeaderEntity.MyModel1Ext</Link>
+    </Content>
+    <Content Include="AxDataEntityViewExtension\SalesQuotationHeaderEntity.MyModel1Ext">
+      <SubType>Content</SubType>
+      <Name>SalesQuotationHeaderEntity.MyModel1Ext</Name>
+      <Link>Entities\SalesQuotationHeaderEntity.MyModel1Ext</Link>
+    </Content>
+    <Content Include="AxDataEntityViewExtension\SalesQuotationHeaderV2Entity.MyModel1">
+      <SubType>Content</SubType>
+      <Name>SalesQuotationHeaderV2Entity.MyModel1</Name>
+      <Link>SalesQuotationHeaderV2Entity.MyModel1</Link>
+    </Content>
+    <Content Include="AxDataEntityViewExtension\SalesQuotationLineEntity.MyModel11Ext">
+      <SubType>Content</SubType>
+      <Name>SalesQuotationLineEntity.MyModel11Ext</Name>
+      <Link>Entities\SalesQuotationLineEntity.MyModel11Ext</Link>
+    </Content>
+    <Content Include="AxDataEntityView\DataEntity1">
+      <SubType>Content</SubType>
+      <Name>DataEntity1</Name>
+      <Link>DataEntity1</Link>
+    </Content>
+    <Content Include="AxDataEntityView\TestTableEntity">
+      <SubType>Content</SubType>
+      <Name>TestTableEntity</Name>
+      <Link>TestTableEntity</Link>
+    </Content>
+    <Content Include="AxEdt\AgentName">
+      <SubType>Content</SubType>
+      <Name>AgentName</Name>
+      <Link>Fields\AgentName</Link>
+    </Content>
+    <Content Include="AxEdt\BranchName">
+      <SubType>Content</SubType>
+      <Name>BranchName</Name>
+      <Link>Fields\BranchName</Link>
+    </Content>
+    <Content Include="AxEdt\CapturerName">
+      <SubType>Content</SubType>
+      <Name>CapturerName</Name>
+      <Link>Fields\CapturerName</Link>
+    </Content>
+    <Content Include="AxEdt\GroupName">
+      <SubType>Content</SubType>
+      <Name>GroupName</Name>
+      <Link>Fields\GroupName</Link>
+    </Content>
+    <Content Include="AxEdt\NssTransactionName">
+      <SubType>Content</SubType>
+      <Name>NssTransactionName</Name>
+      <Link>Fields\NssTransactionName</Link>
+    </Content>
+    <Content Include="AxEdt\NTransactionid">
+      <SubType>Content</SubType>
+      <Name>NTransactionid</Name>
+      <Link>Fields\NTransactionid</Link>
+    </Content>
+    <Content Include="AxEdt\ProductName">
+      <SubType>Content</SubType>
+      <Name>ProductName</Name>
+      <Link>Fields\ProductName</Link>
+    </Content>
+    <Content Include="AxEdt\Surname">
+      <SubType>Content</SubType>
+      <Name>Surname</Name>
+      <Link>Fields\Surname</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\DataEntity1Maintain">
+      <SubType>Content</SubType>
+      <Name>DataEntity1Maintain</Name>
+      <Link>DataEntity1Maintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\DataEntity1View">
+      <SubType>Content</SubType>
+      <Name>DataEntity1View</Name>
+      <Link>DataEntity1View</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\TestTableEntityMaintain">
+      <SubType>Content</SubType>
+      <Name>TestTableEntityMaintain</Name>
+      <Link>TestTableEntityMaintain</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\TestTableEntityView">
+      <SubType>Content</SubType>
+      <Name>TestTableEntityView</Name>
+      <Link>TestTableEntityView</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustCustomerStaging.MyModel1">
+      <SubType>Content</SubType>
+      <Name>CustCustomerStaging.MyModel1</Name>
+      <Link>CustCustomerStaging.MyModel1</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustCustomerV2Staging.MyModel1">
+      <SubType>Content</SubType>
+      <Name>CustCustomerV2Staging.MyModel1</Name>
+      <Link>StagingTables\CustCustomerV2Staging.MyModel1</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustCustomerV3Staging.MyModel11">
+      <SubType>Content</SubType>
+      <Name>CustCustomerV3Staging.MyModel11</Name>
+      <Link>Models\CustCustomerV3Staging.MyModel11</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustInvoiceJour.MyModel1">
+      <SubType>Content</SubType>
+      <Name>CustInvoiceJour.MyModel1</Name>
+      <Link>Models\CustInvoiceJour.MyModel1</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustomerPaymentJournalLineStaging.MyModel1Ext">
+      <SubType>Content</SubType>
+      <Name>CustomerPaymentJournalLineStaging.MyModel1Ext</Name>
+      <Link>StagingTables\CustomerPaymentJournalLineStaging.MyModel1Ext</Link>
+    </Content>
+    <Content Include="AxTableExtension\CustTable.MyModel1Ext">
+      <SubType>Content</SubType>
+      <Name>CustTable.MyModel1Ext</Name>
+      <Link>Models\CustTable.MyModel1Ext</Link>
+    </Content>
+    <Content Include="AxTableExtension\LedgerJournalTrans.MyModel1">
+      <SubType>Content</SubType>
+      <Name>LedgerJournalTrans.MyModel1</Name>
+      <Link>Models\LedgerJournalTrans.MyModel1</Link>
+    </Content>
+    <Content Include="AxTableExtension\LedgerJournalTrans.MyModel11">
+      <SubType>Content</SubType>
+      <Name>LedgerJournalTrans.MyModel11</Name>
+      <Link>LedgerJournalTrans.MyModel11</Link>
+    </Content>
+    <Content Include="AxTableExtension\SalesQuotationLine.MyModel1Ext">
+      <SubType>Content</SubType>
+      <Name>SalesQuotationLine.MyModel1Ext</Name>
+      <Link>Models\SalesQuotationLine.MyModel1Ext</Link>
+    </Content>
+    <Content Include="AxTableExtension\SalesQuotationTable.MyModel1">
+      <SubType>Content</SubType>
+      <Name>SalesQuotationTable.MyModel1</Name>
+      <Link>Models\SalesQuotationTable.MyModel1</Link>
+    </Content>
+    <Content Include="AxTableExtension\SalesTable.MyModel1Ext">
+      <SubType>Content</SubType>
+      <Name>SalesTable.MyModel1Ext</Name>
+      <Link>Models\SalesTable.MyModel1Ext</Link>
+    </Content>
+    <Content Include="AxTable\CustomTable">
+      <SubType>Content</SubType>
+      <Name>CustomTable</Name>
+      <Link>CustomTable</Link>
+    </Content>
+    <Content Include="AxTable\DataStaging">
+      <SubType>Content</SubType>
+      <Name>DataStaging</Name>
+      <Link>DataStaging</Link>
+    </Content>
+    <Content Include="AxTable\TestTableStaging">
+      <SubType>Content</SubType>
+      <Name>TestTableStaging</Name>
+      <Link>TestTableStaging</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.targets" />
+</Project>
