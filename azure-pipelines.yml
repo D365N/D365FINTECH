@@ -1,0 +1,47 @@
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+
+trigger:
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - $/Nyaradzo DevOps
+  batch: True
+resources:
+  repositories:
+  - repository: self
+    type: git
+    ref: refs/heads/main
+jobs:
+- job: Job_1
+  displayName: Agent job 1
+  timeoutInMinutes: 180
+  pool:
+    name: Pool01
+  steps:
+  - checkout: self
+    clean: true
+    fetchTags: false
+  - task: NuGetToolInstaller@0
+    displayName: ' Use NuGet 3.3.0'
+    condition: succeededOrFailed()
+    inputs:
+      versionSpec: 3.3.0
+  - task: CopyFiles@2
+    displayName: 'Copy X++ Compile Log Files to: $(Build.ArtifactStagingDirectory\Logs'
+    inputs:
+      SourceFolder: $(Build.SourcesDirectory)
+      Contents: >
+        **\Dynamics.AX.*.xppc.*
+
+        **\Dynamics.AX.*.labelc.*
+
+        **\Dynamics.AX.*.reportsc.*
+      TargetFolder: $(Build.ArtifactStagingDirectory)\Logs
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: drop'
+...
